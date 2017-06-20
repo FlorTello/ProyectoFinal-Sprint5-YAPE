@@ -1,0 +1,17 @@
+.carousel{
+  margin-top: 25%;
+  min-height: 60vh;
+}
+.carousel p{
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.btn-registrarme{
+  width: 80%;
+}
+.carousel .indicators .indicator-item{
+  background:  #f8f8f8;
+}
+.carousel .indicators .indicator-item.active{
+  background:  #f64552;
+}
