@@ -1,4 +1,5 @@
-.carousel{
+.carousel,
+.register{
   margin-top: 25%;
   min-height: 60vh;
 }
@@ -8,6 +9,12 @@
 }
 .btn-registrarme{
   width: 80%;
+}
+.register{
+  line-height: 30px;
+}
+.btn-register{
+  height: 50px;
 }
 .carousel .indicators .indicator-item{
   background:  #f8f8f8;
