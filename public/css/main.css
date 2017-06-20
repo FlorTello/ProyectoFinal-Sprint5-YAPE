@@ -1,5 +1,6 @@
 .carousel,
-.register{
+.register,
+.register-codigo{
   margin-top: 25%;
   min-height: 60vh;
 }

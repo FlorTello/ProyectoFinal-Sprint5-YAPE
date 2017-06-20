@@ -4,26 +4,17 @@ const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
   if(state.screem == 0){
-    console.log("ddd");
     wrapper.append(Welcome(_=>{render(root)}));
-    // $('.carousel').carousel({fullWidth: true});
-    // $('.carousel.carousel-slider').carousel({fullWidth: true});
-  }
-  if(state.screem == 1){
-    console.log("ddd");
+  }else  if(state.screem == 1){
     wrapper.append(Regiter(_=>{render(root)}));
-    // $('.carousel').carousel({fullWidth: true});
-    // $('.carousel.carousel-slider').carousel({fullWidth: true});
+  }else  if(state.screem == 2){
+    wrapper.append(RegisterCodigo(_=>{render(root)}));
   }
-  // wrapper.append(Cartelera(data));
-
-  //   $('.carousel').carousel({fullWidth: true});
-  // $('.carousel.carousel-slider').carousel({fullWidth: true});
   root.append(wrapper);
 }
 const state = {
   clients: null,
-  screem: 1
+  screem: 2
 };
 
 $( _ => {
