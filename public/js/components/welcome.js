@@ -20,6 +20,7 @@ const Welcome = (update) => {
   const btn_container = $('<div class="center"> </div>');
   const btn = $('<button class="btn waves-effect amber accent-2 white-text btn-registrarme ">Registrame</button>');
 
+
   btn_container.append(btn);
 
   carrucel.append(item1);
@@ -29,5 +30,10 @@ const Welcome = (update) => {
   container.append(carrucel);
   container.append(btn_container);
 
+  btn.on('click',_=>{
+    state.screem = 1;
+    console.log(state.screem);
+    update();
+  });
   return container;
 }

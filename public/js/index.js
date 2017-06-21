@@ -14,7 +14,8 @@ const render = (root) => {
 }
 const state = {
   clients: null,
-  screem: 2
+  screem: 1,
+  validate: false
 };
 
 $( _ => {
