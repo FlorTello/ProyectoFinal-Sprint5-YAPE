@@ -18,7 +18,7 @@ const render = (root) => {
   root.append(wrapper);
 }
 const state = {
-  screenn: 4,
+  screenn: 1,
   validate: false,
   user: {},
 };

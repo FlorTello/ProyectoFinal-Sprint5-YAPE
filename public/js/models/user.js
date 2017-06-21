@@ -15,9 +15,24 @@ const postPhone = (user) => {
 }
 
 const newCode = (phone) => {
-   $.post('api/resendCode/',phone,(req,res) => {
+   $.post('api/resendCode/',phone,(res,req) => {
      console.log(req);
-     state.user.code = req.data;
+     state.user.code = res.data;
     //  state.codigo = req.data;
    });
+};
+
+const createUser = (user) => {
+  return new Promise((resolve,reject) => {
+   $.post('api/createUser/',user,(response,resul,error) => {
+     console.log(response);
+     if (error.status != 200){
+      reject(new Error("Error al grabar el usuario"));
+    }else if(response.success == false){
+      resolve(response);
+    }else{
+       resolve(response);
+     }
+   });
+ });
 }
