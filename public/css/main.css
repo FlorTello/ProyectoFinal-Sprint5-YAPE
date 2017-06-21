@@ -14,7 +14,7 @@
 .register{
   line-height: 30px;
 }
-.fin-yape{
+.parallax-container{
   height: 100vh;
   display: flex;
   align-items: center;
