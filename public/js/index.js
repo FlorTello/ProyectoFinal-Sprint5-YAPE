@@ -14,11 +14,20 @@ const render = (root) => {
   }else  if(state.screenn == 4){
     root.removeClass('container');
     wrapper.append(FinRegistroYape(_=>{render(root)}));
+  }else  if(state.screenn == 5){
+    root.removeClass('container');
+    wrapper.append(RegisterTarjeta(_=>{render(root)}));
+  }else  if(state.screenn == 6){
+    root.removeClass('container');
+    wrapper.append(ClaveTarjeta(_=>{render(root)}));
+  }else  if(state.screenn == 7){
+    root.removeClass('container');
+    wrapper.append(FinRegistroTarjeta(_=>{render(root)}));
   }
   root.append(wrapper);
 }
 const state = {
-  screenn: 1,
+  screenn: 7,
   validate: false,
   user: {},
 };

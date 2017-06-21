@@ -13,7 +13,7 @@ const CreateUsuarioYape = (update) => {
   const label2 = $('<label class="label-icon" data-error="email invalido" for="email"><img src="img/icons/message-gray.png" alt="phone" width="20"></label>');
 
   const div3 = $('<div class="input-field center container"></div>');
-  const input3 = $('<input id="password" class = "center validate" type="password" placeholder="Name" required><span>Cuida esta clave como oro, es tu acceo a Yape</span>');
+  const input3 = $('<input id="password" class = "center validate" type="password" placeholder="Ingresa tu clave de 6 dígitos" required><span>Cuida esta clave como oro, es tu acceo a Yape</span>');
   const label3 = $('<label class="label-icon" for="search"><img src="img/icons/lock.png" alt="phone" width="20"></label>');
   const p = $('<span>Cuida esta clave como oro, es tu acceo a Yape</span>');
 
