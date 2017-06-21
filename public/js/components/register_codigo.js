@@ -1,8 +1,9 @@
 'use strict';
 
-const RegisterCodigo = (update) => {
+const RegisterCodigo = (user,update) => {
+  console.log(state.user);
   const container = $('<div class="center section row register-codigo"></div>');
-  const header = Header(container,'img/icons/message.png','Ahora ingresa tu código','Recibirás un SMS con un código de validación al numero <strong>'+"987654445"+'</<trong>');
+  const header = Header(container,'img/icons/message.png','Ahora ingresa tu código','Recibirás un SMS con un código de validación al numero <strong>'+state.codigo+'</<trong>');
   const col = $('<div class="input-field center container"></div>');
   const input = $('<input id="search" class = "center" type="text" placeholder="_  _  _  _  _" required>');
   const label = $('<label class="label-icon" for="search"><img src="img/icons/lock.png" alt="phone" width="20"></label>');
@@ -12,6 +13,14 @@ const RegisterCodigo = (update) => {
 
   container.append(header);
   container.append(col);
+
+  // ('load',(e)=>{
+    // console.log(state.user.phone);
+    setInterval(_=>{
+        newCode({"phone":state.codigo})
+    }, 5000);
+  // });
+
 
   return container
 }

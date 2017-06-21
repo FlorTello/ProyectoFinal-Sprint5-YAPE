@@ -8,14 +8,15 @@ const render = (root) => {
   }else  if(state.screem == 1){
     wrapper.append(Regiter(_=>{render(root)}));
   }else  if(state.screem == 2){
-    wrapper.append(RegisterCodigo(_=>{render(root)}));
+    wrapper.append(RegisterCodigo(state.user,_=>{render(root)}));
   }
   root.append(wrapper);
 }
 const state = {
-  clients: null,
+  user: null,
   screem: 1,
-  validate: false
+  validate: false,
+  codigo: null
 };
 
 $( _ => {

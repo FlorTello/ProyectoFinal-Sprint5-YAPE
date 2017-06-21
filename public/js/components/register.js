@@ -54,14 +54,13 @@ const Regiter = (update) =>{
   btn_continuar.on('click',_=>{
 
     if(state.validate == true){
-      state.screem = 2;
       const newUser = {
-        "phone": "123456700",
+        "phone": input.val(),
       	"terms": true
       }
-      var er;
-      getNumber(newUser,er);
-      update();
+      state.screem = 2;
+      state.codigo = input.val();
+      postPhone(newUser).then(update());
     }
   });
   return container;
