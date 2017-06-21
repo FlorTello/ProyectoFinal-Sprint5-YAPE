@@ -31,8 +31,8 @@ const Welcome = (update) => {
   container.append(btn_container);
 
   btn.on('click',_=>{
-    state.screem = 1;
-    console.log(state.screem);
+    state.screenn = 1;
+    console.log(state.screenn);
     update();
   });
   return container;

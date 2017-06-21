@@ -14,7 +14,7 @@ const Regiter = (update) =>{
   const col = $('<div class="input-field center container"></div>');
   const input = $('<input id="number" class = "center validate" type="number" min="100000000" max="999999999" placeholder="Ingrese tu número de celular" required>');
   const label = $('<label class="label-icon" for="search"><img src="img/icons/phoneandnumber.png" alt="phone" width="60"></label>');
-  const error = $('<div class = "red-text">Celular Invalido</div>');
+  const error = $('<div class = "red-text error">Celular Invalido</div>');
   const checkbox = $('<input type="checkbox" id="test5" />');
   const label_c = $('<label for="test5">Acepto los <a href="">Términos y condiciones</a></label>');
   const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-register" disabled>Continuar</button>');
@@ -31,6 +31,7 @@ const Regiter = (update) =>{
   container.append(btn_continuar);
 
   input.on('blur',(e) => {
+    error.text('Celular Invalido');
     console.log(isNaN($(e.target).val().length));
     console.log($(e.target).val().length == 9);
       if($(e.target).val().length == 9){
@@ -58,9 +59,17 @@ const Regiter = (update) =>{
         "phone": input.val(),
       	"terms": true
       }
-      state.screem = 2;
-      state.codigo = input.val();
-      postPhone(newUser).then(update());
+      postPhone(newUser).then((response) => {
+        if(response.data == null){
+          error.text(response.message);
+          error.show();
+        }else {
+          state.screenn = 2;
+          state.user.phone = response.data.phone;
+          state.user.code = response.data.code;
+          update();
+        }
+      });
     }
   });
   return container;

@@ -3,20 +3,24 @@
 const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
-  if(state.screem == 0){
+  if(state.screenn == 0){
     wrapper.append(Welcome(_=>{render(root)}));
-  }else  if(state.screem == 1){
+  }else  if(state.screenn == 1){
     wrapper.append(Regiter(_=>{render(root)}));
-  }else  if(state.screem == 2){
-    wrapper.append(RegisterCodigo(state.user,_=>{render(root)}));
+  }else  if(state.screenn == 2){
+    wrapper.append(RegisterCelular(state.user,_=>{render(root)}));
+  }else  if(state.screenn == 3){
+    wrapper.append(CreateUsuarioYape(_=>{render(root)}));
+  }else  if(state.screenn == 4){
+    root.removeClass('container');
+    wrapper.append(FinRegistroYape(_=>{render(root)}));
   }
   root.append(wrapper);
 }
 const state = {
-  user: null,
-  screem: 1,
+  screenn: 4,
   validate: false,
-  codigo: null
+  user: {},
 };
 
 $( _ => {

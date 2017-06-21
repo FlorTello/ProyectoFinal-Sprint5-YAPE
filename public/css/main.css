@@ -1,7 +1,7 @@
 .carousel,
 .register,
 .register-codigo{
-  margin-top: 25%;
+  margin-top: 20%;
   min-height: 60vh;
 }
 .carousel p{
@@ -13,6 +13,12 @@
 }
 .register{
   line-height: 30px;
+}
+.fin-yape{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-register{
   height: 50px;
