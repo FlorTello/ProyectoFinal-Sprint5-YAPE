@@ -31,7 +31,6 @@ const Regiter = (update) =>{
   container.append(btn_continuar);
 
   input.on('blur',(e) => {
-    getNumber();
     console.log(isNaN($(e.target).val().length));
     console.log($(e.target).val().length == 9);
       if($(e.target).val().length == 9){
@@ -53,9 +52,15 @@ const Regiter = (update) =>{
   });
 
   btn_continuar.on('click',_=>{
-    state.validate
+
     if(state.validate == true){
       state.screem = 2;
+      const newUser = {
+        "phone": "123456700",
+      	"terms": true
+      }
+      var er;
+      getNumber(newUser,er);
       update();
     }
   });
