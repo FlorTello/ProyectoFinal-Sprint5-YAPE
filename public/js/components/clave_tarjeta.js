@@ -6,12 +6,11 @@ const ClaveTarjeta = (update) => {
   const col = $('<div class="input-field center container"></div>');
   const input = $('<input id="numero-tarjeta" class = "center" type="password" min="0000" max="9999" placeholder="" required>');
   const label = $('<label class="label-icon" for="numero-tarjeta"><img src="img/icons/lock.png" alt="phone" width="20"></label>');
-  const btn_register = $('<button class="btn waves-effect amber accent-2 white-text btn-register" disabled>regitrar</button>');
+  const btn_register = $('<button class="btn waves-effect amber accent-2 white-text btn-register margin-btn" disabled>regitrar</button>');
 
   col.append(input,label);
   container.append(header);
   container.append(col,btn_register);
-
 
   input.on('keyup',(e) => {
     if($(e.target).val() !== "") {

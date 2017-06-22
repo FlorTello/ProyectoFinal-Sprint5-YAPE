@@ -2,7 +2,7 @@
 
 const RegisterTarjeta = (update) => {
   state.validate = false;
-  const container = $('<div class="center section row register-codigo"></div>');
+  const container = $('<div class="center row register-codigo"></div>');
   const header = Header(container,'img/icons/bcp-logo.png','Registra tu tarjeta débito BCP','Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles.');
   const col = $('<div class="input-field center container"></div>');
   const input = $('<input id="numero-tarjeta" class = "center" type="text" maxlength="16 minlength="16" placeholder="" required>');
@@ -14,7 +14,7 @@ const RegisterTarjeta = (update) => {
   const month = $('<input id="month" class = "center input-date month" type="number" min="1" max="12" placeholder="Mes"  required><i>|</i>');
   const year = $('<input id="year" class = "center input-date" type="number" placeholder="Año" min="17" max="24" required>');
   const btn_container =$('<div class="center"></div>');
-  const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-continuar" disabled>Continuar</button>');
+  const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-continuar margin-btn" disabled>Continuar</button>');
   btn_container.append(btn_continuar);
   div_date.append(month,year);
   div.append(label_fecha,div_date);

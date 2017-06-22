@@ -17,7 +17,7 @@ const Regiter = (update) =>{
   const error = $('<div class = "red-text error">Celular Invalido</div>');
   const checkbox = $('<input type="checkbox" class="filled-in" id="filled-in-box" />');
   const label_c = $('<label for="filled-in-box">Acepto los <a href="">Términos y condiciones</a></label>');
-  const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-register" disabled>Continuar</button>');
+  const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-register margin-btn" disabled>Continuar</button>');
   error.hide();
 
   col.append(label,input,error);

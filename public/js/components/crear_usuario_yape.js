@@ -1,7 +1,7 @@
 'use strict';
 
 const CreateUsuarioYape = (update) => {
-  const container = $('<div class="center section row register-codigo"></div>');
+  const container = $('<div class="center row register-codigo"></div>');
   const header = Header(container,'img/icons/lockone.png','Crea tu usuario Yape','Ingresa tu nombre, email y clave de usuario.');
   const form = $('<form class="col s12"></form>');
   const div = $('<div class="input-field center container"></div>');
@@ -17,7 +17,7 @@ const CreateUsuarioYape = (update) => {
   const label3 = $('<label class="label-icon" for="search"><img src="img/icons/lock.png" alt="phone" width="20"></label>');
   const p = $('<span>Cuida esta clave como oro, es tu acceo a Yape</span>');
 
-  const btn_crearcuenta = $('<input type="button" value="crear cuenta" class="btn waves-effect amber accent-2 white-text btn-crearcuenta" disabled>');
+  const btn_crearcuenta = $('<input type="button" value="crear cuenta" class="btn waves-effect amber accent-2 white-text btn-crearcuenta margin-btn" disabled>');
 
   div.append(input,label,input2,label2,input3,label3);
   div2.append(input2,label2);
