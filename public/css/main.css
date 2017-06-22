@@ -14,7 +14,7 @@
 .register{
   line-height: 30px;
 }
-.parallax-container{
+.screen-fin{
   height: 100vh;
   display: flex;
   align-items: center;
@@ -22,6 +22,33 @@
 }
 .btn-register{
   height: 50px;
+}
+.input-date{
+  height: 30px !important;
+  width: 50px !important;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+img{
+  vertical-align: sub;
+}
+input[type=text]{
+  font-size: 1.3rem;
+}
+.div-right{
+  overflow: auto;
+}
+.card-fin{
+  height: 100vh;
+}
+.purple-light{
+  background: #451e36;
+}
+.purple-dark{
+  background: #38052A;
 }
 .carousel .indicators .indicator-item{
   background:  #f8f8f8;

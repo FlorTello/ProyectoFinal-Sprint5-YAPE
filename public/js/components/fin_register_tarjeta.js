@@ -1,16 +1,19 @@
 'use strict';
 
 const FinRegistroTarjeta = (update) => {
-  const container = $('<div class="center section row register-codigo"></div>');
-  const header = Header(container,'img/icons/bcp-logo.png','Registra tu tarjeta débito BCP','Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles.');
-  const col = $('<div class="input-field center container"></div>');
-  const input = $('<input id="numero-tarjeta" class = "center" type="text" placeholder="" required>');
-  const label = $('<label class="label-icon" for="numero-tarjeta"><img src="img/icons/card.png" alt="phone" width="20"></label>');
+  const container = $('<div class="card-fin parallax-container row center purple-dark white-text"></div>');
+  const header = $('<div class="section purple-light"></div>');
+  const icon_top = $('<span class="col s12 right-align"><img src="img/icons/engine.png" alt="" class="img-responsive" width="25px"></span>');
+  const img = $('<img src="img/icons/happy-face.png" alt="" class="img-responsive" width="100">');
+  const h5 = $('<h5>Hola</h5>');
+  const enlace = $('<p class="teal-text text-accent-4"><img src="img/icons/eye.png" class="center" alt="phone" width="5%">  Mostrar Saldo</p>');
+  header.append(icon_top,img,h5,enlace);
+  const div_movi = $('<p class="col s12 text-uppercase">últimos movimientos</h6><img src="img/icons/engine.png" alt="" class="img-responsive" width="25px"></p>');
 
-  col.append(input,label);
-  container.append(header);
-  container.append(col);
-
-  return container;
+  const icon = $('<img src="img/icons/check.png" class="center" alt="phone" width="0%">');
+  const p = $('<h5 class="black-text text-darken-3"> ¡Bien! <br> Ahara puedes usar Yape </h5>');
+  // div.append(icon,p);
+  container.append(header,div_movi);
+  return container
 
 };
