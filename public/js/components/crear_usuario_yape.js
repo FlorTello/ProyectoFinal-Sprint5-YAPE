@@ -40,9 +40,9 @@ const CreateUsuarioYape = (update) => {
       state.validate = true;
     }
   });
-  input3.on('blur',(e) => {
+  input3.on('keyup',(e) => {
     state.validate = false;
-    if($(e.target).val() !== ''){
+    if($(e.target).val().length == 6 && input.val() != '' && input2.val() != ''){
       state.validate = true;
       btn_crearcuenta.attr('disabled',false);
     }

@@ -17,7 +17,7 @@ const render = (root) => {
     state.screenn = 5;
     setTimeout(_=>{
       render(root);
-    },1000);
+    },3000);
   }else  if(state.screenn == 5){
     wrapper.append(RegisterTarjeta(_=>{render(root)}));
   }else  if(state.screenn == 6){
@@ -29,13 +29,14 @@ const render = (root) => {
   root.append(wrapper);
 }
 const state = {
-  screenn: 0,
+  screenn: 0, // 0 welcome 1 validar numero 2 Ingrese Código 3crear Usuario
   validate: false,
   user: {},
   card: {}
 };
 
 $( _ => {
+    state.card.cardNumber="1123456789234562";
     const root = $("#root");
     render(root);
     $('.carousel').carousel({fullWidth: true});

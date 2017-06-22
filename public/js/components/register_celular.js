@@ -15,8 +15,8 @@ const RegisterCelular = (user,update) => {
                       duration: '21s',
                       callback: function() {
                         newCode({"phone":state.user.phone});
-                        p.timer('remove');
-                        p.timer(confTimer);
+                        time.timer('remove');
+                        time.timer(confTimer);
                        },
                       format: '%s s'};
   time.timer({
