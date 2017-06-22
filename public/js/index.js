@@ -14,13 +14,25 @@ const render = (root) => {
   }else  if(state.screenn == 4){
     root.removeClass('container');
     wrapper.append(FinRegistroYape(_=>{render(root)}));
+    state.screenn = 5;
+    setTimeout(_=>{
+      render(root);
+    },1000);
+  }else  if(state.screenn == 5){
+    wrapper.append(RegisterTarjeta(_=>{render(root)}));
+  }else  if(state.screenn == 6){
+    wrapper.append(ClaveTarjeta(_=>{render(root)}));
+  }else  if(state.screenn == 7){
+    root.removeClass('container');
+    wrapper.append(FinRegistroTarjeta(_=>{render(root)}));
   }
   root.append(wrapper);
 }
 const state = {
-  screenn: 1,
+  screenn: 0,
   validate: false,
   user: {},
+  card: {}
 };
 
 $( _ => {

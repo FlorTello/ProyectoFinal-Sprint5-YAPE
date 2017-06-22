@@ -15,9 +15,9 @@ const Regiter = (update) =>{
   const input = $('<input id="number" class = "center validate" type="number" min="100000000" max="999999999" placeholder="Ingrese tu número de celular" required>');
   const label = $('<label class="label-icon" for="search"><img src="img/icons/phoneandnumber.png" alt="phone" width="60"></label>');
   const error = $('<div class = "red-text error">Celular Invalido</div>');
-  const checkbox = $('<input type="checkbox" id="test5" />');
-  const label_c = $('<label for="test5">Acepto los <a href="">Términos y condiciones</a></label>');
-  const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-register" disabled>Continuar</button>');
+  const checkbox = $('<input type="checkbox" class="filled-in" id="filled-in-box" />');
+  const label_c = $('<label for="filled-in-box">Acepto los <a href="">Términos y condiciones</a></label>');
+  const btn_continuar = $('<button class="btn waves-effect amber accent-2 white-text btn-register margin-btn" disabled>Continuar</button>');
   error.hide();
 
   col.append(label,input,error);

@@ -12,22 +12,22 @@ const RegisterCelular = (user,update) => {
   const time = $('<span></span>');
   p.append(time);
   const confTimer = { countdown: true,
-                      duration: '15s',
+                      duration: '21s',
                       callback: function() {
                         newCode({"phone":state.user.phone});
                         p.timer('remove');
                         p.timer(confTimer);
                        },
-                      format: '%s S'};
+                      format: '%s s'};
   time.timer({
     countdown: true,
-    duration: '15s',
+    duration: '21s',
     callback: function() {
       newCode({"phone":state.user.phone});
       time.timer('remove');
       time.timer(confTimer);
      },
-     format: '%s S'
+     format: '%s s'
   });
 
   col.append(input,label,p);
