@@ -52,8 +52,14 @@
 img{
   vertical-align: sub;
 }
-input[type=text]{
+input[type=text],
+input[type=tel],
+input[type=number],
+input[type=email]{
   font-size: 1.3rem;
+}
+input::-webkit-input-placeholder{
+  font-size: 1rem;
 }
 .div-right{
   overflow: auto;
