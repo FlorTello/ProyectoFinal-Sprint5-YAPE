@@ -8,7 +8,7 @@ const FinRegistroTarjeta = (update) => {
   const h5 = $('<h5>Hola</h5>');
   const enlace = $('<p class="teal-text text-accent-4"><img src="img/icons/eye.png" class="center" alt="phone" width="5%">  Mostrar Saldo</p>');
   header.append(icon_top,img,h5,enlace);
-  const div_movi = $('<p class="col s12 text-uppercase">últimos movimientos</h6><img src="img/icons/engine.png" alt="" class="img-responsive" width="25px"></p>');
+  const div_movi = $('<p class="col s12 text-uppercase left-align">últimos movimientos</h6><img class="right" src="img/icons/right-arrow-circular-button.png" alt="" class="img-responsive" width="25px"></p>');
 
   const icon = $('<img src="img/icons/check.png" class="center" alt="phone" width="0%">');
   const p = $('<h5 class="black-text text-darken-3"> ¡Bien! <br> Ahara puedes usar Yape </h5>');

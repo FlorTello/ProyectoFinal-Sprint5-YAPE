@@ -25,7 +25,7 @@ const render = (root) => {
   root.append(wrapper);
 }
 const state = {
-  screenn: 7,
+  screenn: 9,
   validate: false,
   user: {},
   card: {},
