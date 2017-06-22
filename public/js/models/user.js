@@ -36,3 +36,18 @@ const createUser = (user) => {
    });
  });
 }
+
+const createCard = (card) => {
+  return new Promise((resolve,reject) => {
+   $.post('api/registerCard/',card,(response,resul,error) => {
+     console.log(response);
+     if (error.status != 200){
+      reject(new Error("Error al grabar la tarjeta"));
+    }else if(response.success == false){
+      resolve(response);
+    }else{
+       resolve(response);
+     }
+   });
+ });
+}

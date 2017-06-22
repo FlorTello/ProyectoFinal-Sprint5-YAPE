@@ -47,30 +47,29 @@ const CreateUsuarioYape = (update) => {
       btn_crearcuenta.attr('disabled',false);
     }
   });
-  if(state.validate == true){
-  }
 
   btn_crearcuenta.on('click',(e) => {
-    const newPhone = {
-      "phone": state.user.phone,
-      "name": input.val(),
-      "email": input2.val(),
-      "password": input3.val()
-    }
-    createUser(newPhone).then((response) => {
-      if(response.data == null){
-        console.log(response.message);
-        // error.text(response.message);
-        // error.show();
-      }else {
-        state.screenn = 4;
-        state.user = response.data;
-        setTimeout(_=>{
-          update();
-        },3000);
+    if(state.validate == true){
+      const newPhone = {
+        "phone": state.user.phone,
+        "name": input.val(),
+        "email": input2.val(),
+        "password": input3.val()
       }
-    });
-
+      createUser(newPhone).then((response) => {
+        if(response.data == null){
+          console.log(response.message);
+          // error.text(response.message);
+          // error.show();
+        }else {
+          state.screenn = 4;
+          state.user = response.data;
+          setTimeout(_=>{
+            update();
+          },3000);
+        }
+      });
+    }
   });
 
 

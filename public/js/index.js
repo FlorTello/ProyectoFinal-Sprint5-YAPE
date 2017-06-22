@@ -14,6 +14,10 @@ const render = (root) => {
   }else  if(state.screenn == 4){
     root.removeClass('container');
     wrapper.append(FinRegistroYape(_=>{render(root)}));
+    state.screenn = 5;
+    setTimeout(_=>{
+      render(root);
+    },3000);
   }else  if(state.screenn == 5){
     wrapper.append(RegisterTarjeta(_=>{render(root)}));
   }else  if(state.screenn == 6){
@@ -25,10 +29,10 @@ const render = (root) => {
   root.append(wrapper);
 }
 const state = {
-  screenn: 9,
+  screenn: 7,
   validate: false,
   user: {},
-  card: {},
+  card: {}
 };
 
 $( _ => {
