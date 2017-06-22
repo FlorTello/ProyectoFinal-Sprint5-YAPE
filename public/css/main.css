@@ -20,6 +20,17 @@
   align-items: center;
   justify-content: center;
 }
+.flex-footer{
+  display: flex;
+  align-items: flex-end;
+}
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+.flex-footer img{
+  width: 30%;
+}
 .btn-register{
   height: 50px;
 }
@@ -31,6 +42,9 @@
 }
 .text-uppercase{
   text-transform: uppercase;
+}
+.text-bold{
+  font-weight: bold;
 }
 img{
   vertical-align: sub;
