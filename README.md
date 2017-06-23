@@ -27,6 +27,5 @@ Además la aplicación tiene algunas funciones extra para cargar la data de la a
 
 1. Clonar el repositorio hacia tu cuenta personal para empezar con las modificaciones.
 2. Crea el componente 
-3. Crea el componente 
 
 
